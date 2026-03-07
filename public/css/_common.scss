@@ -333,8 +333,8 @@ ul {
     // background-color: $white;
     // color: $black;
     &::before {
-        width: 110%;
-        padding-bottom: 110%;
+      width: 110%;
+      padding-bottom: 110%;
     }
   }
   &::before {
@@ -365,7 +365,7 @@ ul {
       }
     }
     &::before {
-        background-color: $primary-300;
+      background-color: $primary-300;
     }
   }
 }
@@ -393,38 +393,86 @@ ul {
     align-items: center;
     gap: 20px;
     font-size: 14px;
-    .social {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid $white;
-        svg {
-          width: 16px;
-          height: 16px;
-          path {
-            transition: $transition;
-          }
-        }
-        &:hover {
-          background-color: $primary-300;
-          border-color: $primary-300;
-          svg {
-            path {
-              fill: $black;
-            }
-          }
+  }
+  &-copyright {
+    font-size: 14px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $white;
+    svg {
+      width: 16px;
+      height: 16px;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      background-color: $primary-300;
+      border-color: $primary-300;
+      svg {
+        path {
+          fill: $black;
         }
       }
     }
   }
-  &-copyright {
+}
+
+.inner-head {
+  position: relative;
+  padding-top: 100px;
+  .container {
+    padding: 125px 20px;
+  }
+  &__subtitle {
     font-size: 14px;
+    margin-bottom: 8px;
+    &::before {
+      content: "/ ";
+      font-size: 14px;
+      color: $white;
+    }
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 8px;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0;
+    color: $white-700;
+  }
+  &__video {
+    position: absolute;
+    width: 47%;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    video {
+      width: 100%;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 30%;
+      width: 100%;
+      background: linear-gradient(to top, #000 0%, transparent 100%);
+      left: 0;
+      bottom: 0;
+    }
   }
 }

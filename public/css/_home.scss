@@ -28,6 +28,7 @@
 .home-section {
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .hero {
@@ -76,7 +77,6 @@
   }
   &-wrapper {
     transform-origin: center;
-    // height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -97,7 +97,6 @@
           opacity: 1;
         }
       }
-
     }
   }
   &-item {
@@ -108,9 +107,10 @@
     border-radius: 24px;
     overflow: hidden;
     transition: 1s;
+    // transform: 0;
     &-wrap {
       width: 32%;
-    transition: 1s;
+      transition: 1s;
     }
     &::before {
       position: absolute;
@@ -152,13 +152,13 @@
       }
     }
     &-1 {
-      transform: translateY(-100vh);
+      // transform: translateY(-100vh);
     }
     &-2 {
-      transform: translateY(100vh);
+      // transform: translateY(100vh);
     }
     &-3 {
-      transform: translateY(-100vh);
+      // transform: translateY(-100vh);
     }
   }
 }
