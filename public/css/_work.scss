@@ -187,18 +187,6 @@
       top: 0;
       left: -100%;
       transition: 0.5s;
-      .inner {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        p {
-          color: $black;
-          margin: 0;
-        }
-        img {
-          width: 20px;
-        }
-      }
     }
     &:hover {
       &::before {
