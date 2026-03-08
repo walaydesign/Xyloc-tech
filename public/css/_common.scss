@@ -475,4 +475,12 @@ ul {
       bottom: 0;
     }
   }
+  &--contact {
+    .container {
+      padding-top: 40px;
+      .row {
+        justify-content: flex-end;
+      }
+    }
+  }
 }

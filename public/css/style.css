@@ -554,6 +554,16 @@ ul {
   bottom: 0;
 }
 
+.inner-head--contact .container {
+  padding-top: 40px;
+}
+
+.inner-head--contact .container .row {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .home-bg {
   width: 100%;
   height: 100%;
@@ -1181,6 +1191,211 @@ ul {
           transform: translateX(-50%);
 }
 
+.contact-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.contact-bg__mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contact-bg__video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.contact-info {
+  margin-top: 48px;
+}
+
+.contact-info .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.contact-info .row > div {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-info__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.contact-info__title h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contact-info__icon {
+  width: 20px;
+}
+
+.contact-info__content {
+  padding-left: 32px;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.contact-form {
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+
+.contact-form-item {
+  margin-bottom: 32px;
+}
+
+.contact-form-item > p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-form-item > p span {
+  font-size: 14px;
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form-select .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.contact-form-select .row > div {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.contact-form-btn {
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.contact-form-btn:hover {
+  border-color: #32fa8c;
+  color: #32fa8c;
+}
+
+.contact-form-btn.active {
+  border-color: #32fa8c;
+  background-color: #32fa8c;
+  color: #000;
+}
+
+.contact-form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+.contact-form-input label {
+  height: 55px;
+  width: 120px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-form-input input, .contact-form-input textarea {
+  width: calc(100% - 120px - 20px);
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.contact-form-input input::-webkit-input-placeholder, .contact-form-input textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-input input:-ms-input-placeholder, .contact-form-input textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-input input::-ms-input-placeholder, .contact-form-input textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-input input::placeholder, .contact-form-input textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form-input input {
+  height: 55px;
+  padding: 0 16px;
+}
+
+.contact-form-input textarea {
+  padding: 16px;
+  height: 140px;
+}
+
+.contact-form .btn {
+  margin-left: auto;
+  margin-top: 32px;
+}
+
+.contact-title {
+  position: fixed;
+  width: calc(1280px * 0.5);
+  top: 130px;
+  left: calc((100vw - 1320px) / 2);
+}
+
+@media screen and (max-width: 1399px) {
+  .contact-title {
+    left: calc((100vw - 1140px) / 2);
+  }
+}
+
 .about-subtitle {
   margin-bottom: 4px;
   color: #32fa8c;
@@ -1470,5 +1685,16 @@ ul {
   font-weight: normal;
   margin: 0;
   color: #000;
+}
+
+.term {
+  padding: 170px 0;
+}
+
+.term h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 52px;
 }
 /*# sourceMappingURL=style.css.map */

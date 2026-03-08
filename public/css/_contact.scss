@@ -1,21 +1,174 @@
 .contact {
-    position: relative;
-    background-color: $black;
-    .title {
-        position: absolute;
-        width: 100%;
+  position: relative;
+  background-color: $black;
+  .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 5vw;
+    left: 0;
+  }
+  video {
+    width: 100%;
+  }
+  .btn {
+    position: absolute;
+    width: fit-content;
+    bottom: 5vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.contact-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  &__mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(8px);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &__video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+
+.contact-info {
+  margin-top: 48px;
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    > div {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+  &__icon {
+    width: 20px;
+  }
+  &__content {
+    padding-left: 32px;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+  }
+}
+
+.contact-form {
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  &-item {
+    margin-bottom: 32px;
+    > p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      span {
+        font-size: 14px;
+        margin-left: 8px;
+        color: $white-700;
+      }
+    }
+  }
+  &-select {
+    .row {
+      margin-left: -8px;
+      margin-right: -8px;
+      > div {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+  &-btn {
+    width: 100%;
+    margin-bottom: 16px;
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $white;
+    padding: 12px 4px;
+    transition: $transition;
+    text-align: center;
+    &:hover {
+      border-color: $primary-300;
+      color: $primary-300;
+    }
+    &.active {
+      border-color: $primary-300;
+      background-color: $primary-300;
+      color: $black;
+    }
+  }
+  &-input {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 20px;
+    label {
+        height: 55px;
+        width: 120px;
         text-align: center;
-        top: 5vw;
-        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
-    video {
-        width: 100%;
+    input, textarea {
+        width: calc(100% - 120px - 20px);
+        border-bottom: 1px solid $white;
+        color: $white;
+        &::placeholder {
+            color: $white-600;
+        }
     }
+    input {
+        height: 55px;
+        padding: 0 16px;
+    }
+    textarea {
+        padding: 16px;
+        height: 140px;
+    }
+  }
     .btn {
-        position: absolute;
-        width: fit-content;
-        bottom: 5vw;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-left: auto;
+        margin-top: 32px;
+    }
+}
+
+.contact-title {
+    position: fixed;
+    width: calc(1280px * 0.5);
+    top: 130px;
+    left: calc((100vw - 1320px) / 2);
+    @media screen and (max-width: 1399px) {
+        left: calc((100vw - 1140px) / 2);
     }
 }
