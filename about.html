@@ -28,6 +28,7 @@
           /></a>
         </div>
         <div class="header__func">
+            <div class="header-menu-bg"></div>
           <nav class="header__nav">
             <ul>
               <li><a href="./about.html" class="active">About</a></li>
@@ -147,7 +148,7 @@
         <h3 class="meet-our-team__title">KEY PLAYER</h3>
         <div class="meet-our-team-wrapper">
           <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-6">
               <div class="meet-our-team-sec join-us">
                 <h4>Join Us</h4>
                 <img src="./public/img/arrow-down.svg" alt="" />
@@ -218,12 +219,12 @@
                 <img src="./public/img/game.png" alt="" />
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-6">
               <div class="meet-our-team-sec avatar-long">
                 <img src="./public/img/avatar-1.png" alt="" />
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
               <div class="meet-our-team-sec slogan">
                 <h4>Share your thoughts !</h4>
               </div>
@@ -248,7 +249,7 @@
       </div>
 
       <div class="contact">
-        <h2 class="title"><span class="highlight">Have and Idea?</span></h2>
+        <h2 class="title"><span class="highlight">Have an Idea?</span></h2>
         <video autoplay playsinline muted loop>
           <source src="./public/video/Wormhole.mp4" type="video/mp4" />
         </video>
@@ -378,20 +379,32 @@
       let hoverTimer = null; // 記錄延遲計時器
 
       /* hover 動畫 */
+      const isDesktop = window.innerWidth >= 992;
       items.forEach((item) => {
         item.addEventListener("mouseenter", () => {
-          clearTimeout(hoverTimer);
+          if (isDesktop) {
+            clearTimeout(hoverTimer);
 
-          items.forEach((i) => i.classList.remove("active"));
-          item.classList.add("active");
+            items.forEach((i) => i.classList.remove("active"));
+            item.classList.add("active");
 
-          moveBg(item);
+            moveBg(item);
+          }
         });
       });
 
       /* 初始 active */
       const active = document.querySelector(".process-item.active");
       if (active) moveBg(active);
+
+      $(".process-item").click(function () {
+        if ($(window).width() < 992) {
+          $(".process-item").removeClass("active");
+          $(".process-item").find(".process-item__intro").slideUp(300);
+          $(this).addClass("active");
+          $(this).find(".process-item__intro").slideDown(300);
+        }
+      });
     </script>
   </body>
 </html>

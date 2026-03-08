@@ -24,6 +24,7 @@ requestAnimationFrame(raf);
 $(".header__menu").click(function () {
   $(this).toggleClass("active");
   $(".header__nav").toggleClass("active");
+  $(".header-menu-bg").toggleClass("active");
 });
 
 resize();

@@ -5,6 +5,11 @@
     font-size: 16px;
     font-weight: 100;
   }
+  @media screen and (max-width: 767px) {
+    &-subtitle {
+      font-size: 14px;
+    }
+  }
 }
 
 .process {
@@ -21,14 +26,12 @@
   &-inner {
     display: flex;
     flex-direction: column;
-    // gap: 16px;
   }
   &-bg {
     position: absolute;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 32px;
-    // height: 179px;
     left: 0;
     top: 0;
     z-index: -1;
@@ -105,10 +108,61 @@
       }
     }
   }
+  @media screen and (max-width: 991px) {
+    &-title {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    &-bg {
+      display: none;
+    }
+    &-item {
+      flex-direction: column;
+      padding: 16px;
+      border-radius: 16px;
+      &__intro {
+        width: 100%;
+        padding: 0;
+        order: 2;
+        padding: 20px 0 8px;
+        font-size: 16px;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
+      }
+      &__title {
+        order: 1;
+        width: 100%;
+        padding: 12px 16px;
+        height: auto;
+        border-radius: 12px;
+        h4 {
+          font-size: 18px;
+          .highlight {
+            font-size: 36px;
+          }
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      &.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        .process-item__title {
+          h4 {
+            .highlight {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .meet-our-team {
-    margin-bottom: 140px;
+  margin-bottom: 140px;
   .about-subtitle {
     text-align: center;
   }
@@ -123,6 +177,7 @@
     max-width: 940px;
     width: 100%;
     margin: -20px auto 0;
+    padding: 0 20px;
     .row {
       margin-left: -10px;
       margin-right: -10px;
@@ -158,6 +213,7 @@
       padding: 8px;
       img {
         border-radius: 8px;
+        width: 100%;
       }
     }
     &.avatar-long {
@@ -218,6 +274,68 @@
         margin: 0;
         color: $black;
       }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &-sec {
+      &.slogan {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__title {
+      font-size: 100px;
+    }
+    &-sec {
+      border-radius: 12px;
+      &.join-us {
+        padding: 16px;
+        gap: 8px;
+        h4 {
+          font-size: 18px;
+        }
+        .social {
+        }
+      }
+      &.game {
+        padding: 4px;
+      }
+      &.slogan {
+        margin-top: 12px;
+        h4 {
+          font-size: 40px;
+        }
+      }
+      &.introduce {
+        border-radius: 12px;
+        p {
+          padding: 12px;
+          font-size: 14px;
+        }
+      }
+      &.avatar-long, &.avatar-sqare {
+        border-radius: 12px;
+      }
+    }
+    &-wrapper {
+      .row {
+          margin-left: -6px;
+          margin-right: -6px;
+        >div {
+          padding-left: 6px;
+          padding-right: 6px;
+          gap: 12px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__title {
+      font-size: 72px;
+    }
+    &-wrapper {
+      margin: -12px auto 0;
     }
   }
 }
