@@ -533,7 +533,7 @@ ul {
     right: 20px;
     transform: translateY(-50%);
     z-index: -1;
-    video {
+    video, iframe {
       width: 100%;
     }
     &::before {
