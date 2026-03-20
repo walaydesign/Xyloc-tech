@@ -367,6 +367,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header__logo {
+    width: 110px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .header__logo {
     width: 90px;
@@ -491,9 +497,15 @@ ul {
   overflow: hidden;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .title {
     font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .title {
+    font-size: 36px;
   }
 }
 
@@ -860,6 +872,12 @@ ul {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 575px) {
+  .hero__text {
+    font-size: 14px;
+  }
+}
+
 .home-title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -897,6 +915,37 @@ ul {
 
 .home-title-swiper .swiper-slide {
   height: 90px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .home-title > span {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .home-title > span {
+    font-size: 40px;
+  }
+  .home-title-middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .home-title-swiper {
+    margin: 0;
+    height: 58px !important;
+  }
+  .home-title-swiper .swiper-slide {
+    height: 58px !important;
+  }
+  .home-title-line#title-3 {
+    margin-top: -8px;
+  }
 }
 
 .selected .container {
@@ -1029,6 +1078,29 @@ ul {
           transform: translateY(-100vh);
 }
 
+@media screen and (max-width: 767px) {
+  .selected-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .selected-item {
+    padding-bottom: 24vh;
+  }
+  .selected-item-wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .selected-item__title {
+    font-size: 24px;
+    padding: 16px;
+  }
+}
+
 .works {
   overflow: visible;
 }
@@ -1121,6 +1193,18 @@ ul {
           transform: translate(110%, 70%);
 }
 
+@media screen and (max-width: 767px) {
+  .works-text__slogan {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .works-device {
+    width: 170%;
+  }
+}
+
 .other-works .container {
   height: 100%;
 }
@@ -1208,6 +1292,44 @@ ul {
      object-fit: cover;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .other-works-pic {
+    padding-bottom: 50%;
+  }
+  .other-works-item {
+    padding: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .other-works-item__pic {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .other-works-item__wrapper {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .other-works-item__title {
+    font-size: 32px;
+  }
+  .other-works-item__content {
+    font-size: 14px;
+  }
 }
 
 .testimonial {
@@ -1353,6 +1475,19 @@ ul {
   padding-left: 12px;
 }
 
+@media screen and (max-width: 575px) {
+  .testimonial-wrapper {
+    padding: 40px 20px;
+  }
+  .testimonial-inner__icon {
+    margin-bottom: 20px;
+  }
+  .testimonial-item__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
 @-webkit-keyframes loop {
   to {
     -webkit-transform: translateX(-100%);
@@ -1493,6 +1628,12 @@ ul {
   color: #000;
 }
 
+@media screen and (max-width: 575px) {
+  .service-item__wrapper {
+    padding: 24px;
+  }
+}
+
 .work-tag {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1510,6 +1651,12 @@ ul {
   margin: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  .work-tag > p {
+    font-size: 12px;
+  }
 }
 
 .works-tab {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xyloc</title>
+    <link rel="shortcut icon" href="favicon.ico" /> 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,7 +60,7 @@
           <h1 class="home-title">
             <span class="home-title-line" id="title-1">The Partner Behind</span>
             <span class="home-title-middle"
-              >Your 
+              >Your
               <div class="swiper-container home-title-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><span>Digital Product</span></div>
@@ -232,8 +233,16 @@
       </div>
       <div class="home-section testimonial">
         <div class="testimonial-logo">
-          <img class="testimonial-logo__img" src="./public/img/logos.png" alt="">
-          <img class="testimonial-logo__img" src="./public/img/logos.png" alt="">
+          <img
+            class="testimonial-logo__img"
+            src="./public/img/logos.png"
+            alt=""
+          />
+          <img
+            class="testimonial-logo__img"
+            src="./public/img/logos.png"
+            alt=""
+          />
         </div>
         <div class="title-wrap">
           <h2 class="title title-testimonial">Stand with Clients</h2>
@@ -508,7 +517,8 @@
         spaceBetween: 16,
         speed: 1000,
         direction: "vertical",
-        loop: true, 
+        loop: true,
+        allowTouchMove: false,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
@@ -560,10 +570,22 @@
     <!-- services -->
     <script>
       var swiperService = new Swiper(".service-swiper", {
-        slidesPerView: 3.1,
-        spaceBetween: 52,
-        slidesPerGroup: 3,
+        slidesPerView: 1.3,
+        spaceBetween: 16,
+        slidesPerGroup: 1,
         speed: 1000,
+        breakpoints: {
+          675: {
+            slidesPerView: 2.3,
+            spaceBetween: 24,
+        slidesPerGroup: 2,
+          },
+          768: {
+            slidesPerView: 3.1,
+            spaceBetween: 52,
+        slidesPerGroup: 3,
+          },
+        },
       });
     </script>
   </body>

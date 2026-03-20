@@ -345,6 +345,11 @@ ul {
       display: block;
     }
   }
+  @media screen and (max-width: 767px) {
+    &__logo {
+      width: 110px;
+    }
+  }
   @media screen and (max-width: 575px) {
     &__logo {
       width: 90px;
@@ -429,8 +434,11 @@ ul {
   &-wrap {
     overflow: hidden;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     font-size: 48px;
+  }
+  @media screen and (max-width: 575px) {
+    font-size: 36px;
   }
 }
 
