@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
   //   scrollTrigger: {
   //     trigger: ".hero",
   //     start: "top top",
-  //     end: "+=200",
+  //     end: "+=100",
   //     scrub: true,
   //   },
   // });
@@ -42,279 +42,288 @@ window.addEventListener("load", () => {
   });
 
   //   精選案例動畫
-    gsap.from(".selected-item", {
-      scrollTrigger: {
-        trigger: ".selected",
-        start: "top 70%",
-        end: "+=300",
-        scrub: 1,
-        markers: true,
-        // toggleActions: "restart pause reverse pause",
-      },
-      duration: 1,
-      y: "100%",
-    });
-  
-  
-  // gsap.to(".selected-item", {
-  //   scrollTrigger: {
-  //     trigger: ".selected",
-  //     start: "top 70%",
-  //     end: "+=300",
-  //     scrub: 1,
-  //     toggleActions: "restart pause reverse pause",
-  //   },
-  //   duration: 2,
-  //   yPercent: 100,
-  // });
 
-
-
-
-  // 很多案例
-  gsap.to(".works-device--top", {
+  // 進場
+  gsap.to(".selected-item", {
     scrollTrigger: {
-      trigger: ".works",
-      start: "top 70%",
-      end: "+=300",
+      trigger: ".selected",
+      start: "top 90%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    y: 0,
     duration: 2,
+  });
+
+  // 離場
+  gsap.to(".selected-item", {
+    scrollTrigger: {
+      trigger: ".works",
+      start: "top 90%",
+      end: "30% 40%",
+      scrub: 1,
+      toggleActions: "restart pause reverse pause",
+    },
+    scale: 0.5,
+    opacity: 0,
+    duration: 2,
+  });
+
+  // 很多案例
+
+  // 進場
+  gsap.to(".works-device--top", {
+    scrollTrigger: {
+      trigger: ".works",
+      start: "top 90%",
+      end: "30% 40%",
+      scrub: 1,
+      toggleActions: "restart pause reverse pause",
+    },
     x: 0,
+    duration: 2,
   });
 
   gsap.to(".works-text__slogan", {
     scrollTrigger: {
       trigger: ".works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 40%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     y: 0,
+    duration: 2,
   });
 
   gsap.to(".works-text__more", {
     scrollTrigger: {
       trigger: ".works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 40%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     y: 0,
+    duration: 2,
   });
 
   gsap.to(".works-device--bottom", {
     scrollTrigger: {
       trigger: ".works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 40%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    x: 0,
     duration: 2,
-    x: 0,
   });
 
-  gsap.from(".works-device--top", {
+  // 離場
+  gsap.to(".works-device--top", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top bottom",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    xPercent: 110,
     duration: 2,
-    x: 0,
   });
 
-  gsap.from(".works-text__slogan", {
+  gsap.to(".works-text__slogan", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top bottom",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 0.5,
-    y: 0,
+    yPercent: 110,
+    duration: 2,
   });
 
-  gsap.from(".works-text__more", {
+  gsap.to(".works-text__more", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top bottom",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 0.5,
-    y: 0,
+    yPercent: -110,
+    duration: 2,
   });
 
-  gsap.from(".works-device--bottom", {
+  gsap.to(".works-device--bottom", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
-      scrub: true,
+      start: "top bottom",
+      end: "30% 40%",
+      scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 3,
-    x: 0,
+    xPercent: -110,
+    duration: 2,
   });
 
   // 其他案例
+  // 進場
   gsap.to(".other-works-item__text", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 50%",
+      end: "40% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     y: 0,
+    duration: 2,
   });
 
   gsap.to(".other-works-pic", {
     scrollTrigger: {
       trigger: ".other-works",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 40%",
+      end: "50% 60%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     y: 0,
+    duration: 2,
   });
 
-  gsap.from(".other-works-item__text", {
+  // 離場
+  gsap.to(".other-works-item__text", {
     scrollTrigger: {
       trigger: ".testimonial",
-      start: "top 70%",
-      end: "+=300",
+      start: "top bottom",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    yPercent: -100,
     duration: 2,
-    y: 0,
   });
 
-  gsap.from(".other-works-pic", {
+  gsap.to(".other-works-pic", {
     scrollTrigger: {
       trigger: ".testimonial",
-      start: "top 70%",
-      end: "+=300",
+      start: "top bottom",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    scale: 0.5,
+    opacity: 0,
     duration: 2,
-    y: 0,
   });
 
   // 客戶反饋
+  // 進場
   gsap.to(".title-testimonial", {
     scrollTrigger: {
       trigger: ".testimonial",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 60%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     y: 0,
+    duration: 2,
   });
 
   gsap.to(".testimonial-wrapper", {
     scrollTrigger: {
       trigger: ".testimonial",
-      start: "top 70%",
-      end: "+=300",
+      start: "top 60%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
-    duration: 2,
     scale: 1,
     opacity: 1,
+    duration: 2,
   });
 
-  gsap.from(".title-testimonial", {
-    scrollTrigger: {
-      trigger: ".service",
-      start: "top 70%",
-      end: "+=300",
-      scrub: 1,
-      toggleActions: "restart pause reverse pause",
-    },
-    duration: 2,
-    y: 0,
-  });
+  // 離場
+  // gsap.to(".title-testimonial", {
+  //   scrollTrigger: {
+  //     trigger: ".service",
+  //     start: "top bottom",
+  //     end: "30% 40%",
+  //     scrub: 1,
+  //     // markers: true,
+  //     toggleActions: "restart pause reverse pause",
+  //   },
+  //   yPercent: 110,
+  //   duration: 2,
+  // });
 
-  gsap.from(".testimonial-wrapper", {
-    scrollTrigger: {
-      trigger: ".service",
-      start: "top 70%",
-      end: "+=300",
-      scrub: 1,
-      toggleActions: "restart pause reverse pause",
-    },
-    duration: 2,
-    scale: 1,
-    opacity: 1,
-  });
+  // gsap.to(".testimonial-wrapper", {
+  //   scrollTrigger: {
+  //     trigger: ".service",
+  //     start: "top 90%",
+  //     end: "30% 40%",
+  //     scrub: 1,
+  //     toggleActions: "restart pause reverse pause",
+  //   },
+  //   scale: 0.5,
+  //   opacity: 0,
+  //   duration: 2,
+  // });
+
 
   // 服務項目
+    gsap.to(".title-service", {
+      scrollTrigger: {
+        trigger: ".service",
+        start: "top 60%",
+        end: "30% 40%",
+        scrub: 1,
+        toggleActions: "restart pause reverse pause",
+      },
+      y: 0,
+      duration: 2,
+    });
+
+    gsap.to(".service-swiper", {
+      scrollTrigger: {
+        trigger: ".service",
+        start: "top 60%",
+        end: "30% 40%",
+        scrub: 1,
+        toggleActions: "restart pause reverse pause",
+      },
+      y: 0,
+      duration: 2,
+    });
+  
   gsap.to(".title-service", {
     scrollTrigger: {
-      trigger: ".service",
-      start: "top 70%",
-      end: "+=300",
+      trigger: ".contact",
+      start: "top 80%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    yPercent: 100,
     duration: 2,
-    y: 0,
   });
 
   gsap.to(".service-swiper", {
     scrollTrigger: {
-      trigger: ".service",
-      start: "top 70%",
-      end: "+=300",
+      trigger: ".contact",
+      start: "top 80%",
+      end: "30% 40%",
       scrub: 1,
       toggleActions: "restart pause reverse pause",
     },
+    xPercent: -100,
     duration: 2,
-    y: 0,
   });
 
-  gsap.from(".title-service", {
-    scrollTrigger: {
-      trigger: ".contact",
-      start: "top 70%",
-      end: "+=300",
-      scrub: 1,
-      toggleActions: "restart pause reverse pause",
-    },
-    duration: 2,
-    y: 0,
-  });
-
-  gsap.from(".service-swiper", {
-    scrollTrigger: {
-      trigger: ".contact",
-      start: "top 70%",
-      end: "+=300",
-      scrub: 1,
-      toggleActions: "restart pause reverse pause",
-    },
-    duration: 2,
-    y: 0,
-  });
 });
-

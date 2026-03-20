@@ -27,61 +27,60 @@ window.addEventListener("load", () => {
       scrub: 1,
     },
   });
-    
-    
-    // 精選作品
-    gsap.set(".selected-item", {
-      y: 100,
-      opacity: 0,
-    });
 
-    gsap.to(".selected-item", {
-      y: 0,
-      opacity: 1,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".selected",
-        start: "top 70%",
-        end: "+=300",
-        scrub: true,
-      },
-    });
+  // 精選作品
+  gsap.set(".selected-item", {
+    y: 100,
+    opacity: 0,
+  });
 
-    // 很多作品
-  const worksTl = gsap.timeline({
+  gsap.to(".selected-item", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.2,
     scrollTrigger: {
-      trigger: ".works",
+      trigger: ".selected",
       start: "top 70%",
-      end: "+=500",
+      end: "+=300",
       scrub: true,
     },
   });
 
-  worksTl
-    .from(".works-device--top", {
-      x: "-150%",
-    })
-    .from(
-      ".works-text__slogan",
-      {
-        y: "-110%",
-      },
-      "<",
-    )
-    .from(
-      ".works-text__more",
-      {
-        y: "110%",
-      },
-      "<",
-    )
-    .from(
-      ".works-device--bottom",
-      {
-        x: "150%",
-      },
-      "<",
-    );
+  // 很多作品
+  // const worksTl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".works",
+  //     start: "top 70%",
+  //     end: "+=500",
+  //     scrub: true,
+  //   },
+  // });
+
+  // worksTl
+  //   .from(".works-device--top", {
+  //     x: "-150%",
+  //   })
+  //   .from(
+  //     ".works-text__slogan",
+  //     {
+  //       y: "-110%",
+  //     },
+  //     "<",
+  //   )
+  //   .from(
+  //     ".works-text__more",
+  //     {
+  //       y: "110%",
+  //     },
+  //     "<",
+  //   )
+  //   .from(
+  //     ".works-device--bottom",
+  //     {
+  //       x: "150%",
+  //     },
+  //     "<",
+  //   );
 
   const worksOut = gsap.timeline({
     scrollTrigger: {
