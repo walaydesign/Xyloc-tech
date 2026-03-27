@@ -190,7 +190,6 @@ window.addEventListener("load", () => {
         trigger: ".other-works",
         start: "top 30%",
         end: "50% 50%",
-        markers: true,
         scrub: 1,
       },
     });
