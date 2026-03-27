@@ -849,6 +849,12 @@ ul {
   margin-bottom: 100px;
 }
 
+@media screen and (max-width: 767px) {
+  .home-section {
+    margin-bottom: 40px;
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -915,6 +921,7 @@ ul {
 
 .home-title-swiper .swiper-slide {
   height: 90px !important;
+  color: #00ee55;
 }
 
 @media screen and (max-width: 767px) {
@@ -1091,6 +1098,18 @@ ul {
   }
   .selected-item-wrap {
     width: 100%;
+  }
+  .selected-item-1 {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  .selected-item-2 {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+  .selected-item-3 {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
   }
 }
 

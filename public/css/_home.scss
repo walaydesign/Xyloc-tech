@@ -29,6 +29,9 @@
   height: 100vh;
   overflow: hidden;
   margin-bottom: 100px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 }
 
 .hero {
@@ -73,6 +76,7 @@
     margin-left: 16px;
     .swiper-slide {
       height: 90px !important;
+      color: $primary-500;
     }
   }
   @media screen and (max-width: 767px) {
@@ -214,6 +218,15 @@
       &-wrap {
         width: 100%;
       }
+    &-1 {
+      transform: translateX(-100vw);
+    }
+    &-2 {
+      transform: translateX(100vw);
+    }
+    &-3 {
+      transform: translateX(-100vw);
+    }
     }
   }
   @media screen and (max-width: 575px) {
